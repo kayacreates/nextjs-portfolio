@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* --background: #fff6d2; */
+  --foreground: #171717;
+  --header-font: var(--font-unica-one);
+  --body-font: var(--font-crimson-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-lightHover: #c99cf0;
+  --color-darkHover: #2a004a;
+  --color-darkTheme: oklch(92.3% 0.003 48.717);
+  --color-blue: #132fba;
+  --color-blue-light: #799cf0;
+  --color-beige: #fffefa;
+  --color-yellow: #e3dc89;
+  --color-yellow-light: #fff6d2;
+  --color-blue-dark: #2A2865;
+  --box-shadow-black: 4px 4px 0 #44403C;
+  --box-shadow-blue: 6px 6px 0 var(--color-blue-light);
+}
+
+:root.dark {
+  --background: var(--color-darkTheme);
+  --foreground: oklch(37.4% 0.01 67.558);
+  --header-font: var(--font-nunito);
+  --body-font: var(--font-open-sans);
+  color: oklch(37.4% 0.01 67.558);
+}
+
+@layer utilities {
+  .font-open-sans {
+    font-family: var(--font-open-sans), serif;
+  }
+
+  .font-unica-one {
+    font-family: var(--font-unica-one), serif;
+  }
+
+  .font-crimson-text {
+    font-family: var(--font-crimson-text), serif;
+  }
+  
+  .shadow-c-blue {
+    box-shadow: var(--box-shadow-blue);
+  }
+
+  .hover\:shadow-c-blue:hover {
+    box-shadow: var(--box-shadow-blue);
+  }
+
+  /* Dark mode shadow */
+  .dark\:shadow-c-black {
+    @apply dark:shadow-[var(--box-shadow-black)];
+  }
+
+  .dark\:hover\:shadow-c-black:hover {
+    @apply dark:hover:shadow-[var(--box-shadow-black)];
+  }
+  
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--color-blue);
+  font-family: var(--font-crimson-text);
+}
+
+.dark body {
+  font-family: var(--font-open-sans);
+  color: #243132;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  font-family: var(--header-font);
+}
+
+nav,
+.dark nav {
+  font-family: var(--header-font);
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+}
+
+.works .work:nth-child(1) {
+  align-self: flex-start;
+}
+
+.works .work:nth-child(2) {
+  align-self: flex-end;
+}
+
+.works .work:nth-child(3) {
+  align-self: center;
+}
