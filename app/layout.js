@@ -33,6 +33,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${nunito.variable} ${open_sans.variable}  ${unica_one.variable} ${crimson_text.variable} scroll-smooth `}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const isDark = localStorage.theme === 'dark' ||
+                  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (isDark) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased leading-8 overflow-x-hidden">{children}</body>
     </html>
   );
