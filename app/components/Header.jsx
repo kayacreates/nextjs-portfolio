@@ -133,7 +133,7 @@ const Header = ({isDarkMode}) => {
             initial={{ y: 30, opacity: 0}}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{duration: 0.6, delay: 1.2}}
-            href='/sample-resume.pdf' download className='px-10 py-3 border rounded-xl dark:rounded-full border-[--color-blue] flex items-center gap-2 dark:bg-stone-700 dark:text-stone-200 hover:-translate-y-2 duration-300 font-semibold font-unica-one dark:font-nunito dark:border-stone-700'>my resume <ArrowDownToLine /></motion.a>
+            href='/kaya-kim-resume-2024.pdf' download className='px-10 py-3 border rounded-xl dark:rounded-full border-[--color-blue] flex items-center gap-2 dark:bg-stone-700 dark:text-stone-200 hover:-translate-y-2 duration-300 font-semibold font-unica-one dark:font-nunito dark:border-stone-700'>my resume <ArrowDownToLine /></motion.a>
         </div>
       </div>
     </div>
