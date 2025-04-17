@@ -13,16 +13,16 @@ const open_sans = Open_Sans({
   weight: ["400", "500", "600", "700"]
 });
 
-const unica_one = Unica_One({
-  variable: "--font-unica-one",
-  subsets: ["latin"],
-  weight: ["400"]
-});
-
 const crimson_text = Crimson_Text({
   variable: "--font-crimson-text",
   subsets: ["latin"],
   weight: ["400", "600", "700"]
+});
+
+const unica_one = Unica_One({
+  variable: "--font-unica-one",
+  subsets: ["latin"],
+  weight: ["400"]
 });
 
 export const metadata = {
@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${nunito.variable} ${open_sans.variable}  ${unica_one.variable} ${crimson_text.variable} scroll-smooth `}>
+    <html lang="en" className={`${nunito.variable} ${open_sans.variable}  ${crimson_text.variable}   ${unica_one.variable} scroll-smooth`}>
       <head>
         <script
           dangerouslySetInnerHTML={{

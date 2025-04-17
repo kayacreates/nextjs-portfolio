@@ -2246,10 +2246,6 @@
     border-color: var(--color-stone-700);
   }
 
-  .dark\:bg-darkHover:where(.dark, .dark *) {
-    background-color: #2a004a;
-  }
-
   .dark\:bg-inherit:where(.dark, .dark *) {
     background-color: inherit;
   }

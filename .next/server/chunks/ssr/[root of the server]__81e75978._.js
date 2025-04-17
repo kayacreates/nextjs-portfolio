@@ -662,9 +662,9 @@ const workData = [
         ]
     },
     {
-        title: 'Basemap',
-        description: 'Sole developer on a rebrand project for an outdoor mapping app. Delivered a 10+ template WordPress site a week ahead of a tight 3-week deadline. Recognized as Developer of the Month for this work.',
-        link: '',
+        title: 'RIDE.co',
+        description: 'Custom WordPress build with reusable blocks, scroll animations, and responsive templates. Focused on clean design, performance, and a smooth editing experience.',
+        link: 'https://ride.co/',
         tags: [
             'WordPress CMS',
             'PHP',
@@ -1745,7 +1745,7 @@ const Header = ({ isDarkMode })=>{
                                     duration: 0.6,
                                     delay: 1.2
                                 },
-                                href: "/sample-resume.pdf",
+                                href: "/kaya-kim-resume-2024.pdf",
                                 download: true,
                                 className: "px-10 py-3 border rounded-xl dark:rounded-full border-[--color-blue] flex items-center gap-2 dark:bg-stone-700 dark:text-stone-200 hover:-translate-y-2 duration-300 font-semibold font-unica-one dark:font-nunito dark:border-stone-700",
                                 children: [
@@ -1753,7 +1753,7 @@ const Header = ({ isDarkMode })=>{
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2d$to$2d$line$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDownToLine$3e$__["ArrowDownToLine"], {}, void 0, false, {
                                         fileName: "[project]/app/components/Header.jsx",
                                         lineNumber: 136,
-                                        columnNumber: 303
+                                        columnNumber: 310
                                     }, this)
                                 ]
                             }, void 0, true, {
@@ -2047,7 +2047,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode })=>{
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                     ref: sideMenuRef,
-                    className: "flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white",
+                    className: "flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-(--color-blue) text-white transition duration-500 dark:bg-stone-800 dark:text-white",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             className: "absolute right-6 top-6",

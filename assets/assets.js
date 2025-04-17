@@ -58,9 +58,9 @@ export const workData = [
         tags: ['WordPress CMS', 'PHP', 'jQuery', 'React']
     },
     {
-        title: 'Basemap',
-        description: 'Sole developer on a rebrand project for an outdoor mapping app. Delivered a 10+ template WordPress site a week ahead of a tight 3-week deadline. Recognized as Developer of the Month for this work.',
-        link: '',
+        title: 'RIDE.co',
+        description: 'Custom WordPress build with reusable blocks, scroll animations, and responsive templates. Focused on clean design, performance, and a smooth editing experience.',
+        link: 'https://ride.co/',
         tags: ['WordPress CMS', 'PHP', 'jQuery', 'React']
     },
     {
