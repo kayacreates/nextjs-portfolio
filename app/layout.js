@@ -32,21 +32,26 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${nunito.variable} ${open_sans.variable}  ${crimson_text.variable}   ${unica_one.variable} scroll-smooth`}>
+    <html lang="en" className={`${nunito.variable} ${open_sans.variable} ${crimson_text.variable} ${unica_one.variable} scroll-smooth`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function () {
-              try {
-                const isDark = localStorage.theme === 'dark' ||
-                  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-                if (isDark) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
+            __html: `
+              (function () {
+                try {
+                  const theme = localStorage.getItem('theme');
+                  if (!theme) {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    localStorage.setItem('theme', prefersDark ? 'dark' : 'light');
+                  }
+                  if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {
+                  console.error(e);
                 }
-              } catch(e) {}
-            })();`
+              })();
+            `,
           }}
         />
       </head>
