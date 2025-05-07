@@ -36,15 +36,17 @@ export default function RootLayout({ children }) {
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
+            __html: `(function () {
+              try {
                 const isDark = localStorage.theme === 'dark' ||
                   (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
                 if (isDark) {
                   document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
                 }
-              })();
-            `,
+              } catch(e) {}
+            })();`
           }}
         />
       </head>
