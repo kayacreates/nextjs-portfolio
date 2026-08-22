@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import ContactForm from "./ContactForm";
+import Image from "next/image";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -67,7 +68,7 @@ const projects: Project[] = [
       "Modern local development and production-ready asset workflow",
     ],
     accent: "#5767E8",
-    image: "rivera",
+    image: "/images/projects/rivera.avif",
   },
   {
     id: 2,
@@ -85,7 +86,7 @@ const projects: Project[] = [
       "Responsive behavior across desktop and mobile",
     ],
     accent: "#5C8E7A",
-    image: "compass",
+    image: "/images/projects/compasshealth.jpg",
   },
   {
     id: 3,
@@ -103,7 +104,7 @@ const projects: Project[] = [
       "Streamlined theme structure for easier maintenance",
     ],
     accent: "#8B5CF6",
-    image: "basemap",
+    image: "/images/projects/basemap.webp",
   },
 ];
 
@@ -379,13 +380,13 @@ function Nav({
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <button
+          {/* <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle dark mode"
             className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all duration-200 text-base"
           >
             {dark ? "☀" : "☾"}
-          </button>
+          </button> */}
           <a
             href="#contact"
             className="px-5 py-2 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-80 transition-opacity duration-200"
@@ -548,23 +549,6 @@ function Hero() {
           </a>
         </motion.div>
       </motion.div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase">
-          Scroll
-        </span>
-        <motion.div
-          animate={{ scaleY: [0.4, 1, 0.4], opacity: [0.4, 1, 0.4] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-10 bg-gradient-to-b from-muted-foreground to-transparent origin-top"
-        />
-      </motion.div>
     </section>
   );
 }
@@ -574,7 +558,6 @@ function Hero() {
 function Work() {
   return (
     <section id="work" className="py-32 max-w-7xl mx-auto px-6">
-      <ScrollReveal>
         <SectionLabel>Selected Work</SectionLabel>
         <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.02em] mb-4">
           Featured projects
@@ -583,7 +566,6 @@ function Work() {
           A few examples of how I turn design requirements and complex content
           needs into maintainable WordPress experiences.
         </p>
-      </ScrollReveal>
 
       <div className="space-y-28">
         {projects.map((project, i) => (
@@ -633,6 +615,15 @@ function ProjectCard({
               <span className="ml-auto text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
                 Case study
               </span>
+            </div>
+            <div className="relative aspect-[16/11] overflow-hidden">
+              <Image
+                src={project.image}
+                alt={`${project.title} website`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
+              />
             </div>
             <div className="p-5 md:p-7 h-[calc(100%-2.5rem)] flex flex-col justify-between">
               <div>
